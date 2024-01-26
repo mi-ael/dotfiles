@@ -1,0 +1,13 @@
+A forw-scroll
+a forw-line
+L back-scroll
+l back-line
+i back-scroll
+e forw-scroll
+w goto-end
+x goto-line
+s forw-search
+S back-search
+m repeat-search
+, reverse-search
+
