@@ -775,10 +775,7 @@ def --env yazi [...args] {
 	}
 	rm -fp $tmp
 }
-alias ya = yazi
-alias cat = bat
-alias less = less -R
-alias hx = helix
+
 
 source ~/.config/nushell/scripts/zoxide.nu
 source ~/.config/nushell/scripts/atuin.nu
@@ -813,6 +810,7 @@ const plugins = [
   nu_plugin_gstat
   nu_plugin_highlight
   nu_plugin_qr_maker
+  nu_plugin_query
 ]
 
 const plugin_prefix = "~/.cargo/bin/"
@@ -825,5 +823,12 @@ register ($plugin_prefix + $plugins.1)
 register ($plugin_prefix + $plugins.2)
 register ($plugin_prefix + $plugins.3)
 register ($plugin_prefix + $plugins.4)
+register ($plugin_prefix + $plugins.5)
 
 
+
+alias ya = yazi
+alias cat = bat
+alias less = less -R
+alias hx = helix
+#alias "dns query" = dns query --dnssec=none
