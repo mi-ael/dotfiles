@@ -803,3 +803,27 @@ $env.PROMPT_INDICATOR = ""
 $env.PROMPT_INDICATOR_VI_INSERT = ": "
 $env.PROMPT_INDICATOR_VI_NORMAL = "〉"
 $env.PROMPT_MULTILINE_INDICATOR = "::: "
+
+source ~/.config/nushell/scripts/carapace_init.nu
+
+
+const plugins = [
+  nu_plugin_clipboard
+  nu_plugin_dns
+  nu_plugin_gstat
+  nu_plugin_highlight
+  nu_plugin_qr_maker
+]
+
+const plugin_prefix = "~/.cargo/bin/"
+
+
+# hack to load plugins
+# rewrite when loop is supported it parse-time
+register ($plugin_prefix + $plugins.0)
+register ($plugin_prefix + $plugins.1)
+register ($plugin_prefix + $plugins.2)
+register ($plugin_prefix + $plugins.3)
+register ($plugin_prefix + $plugins.4)
+
+
