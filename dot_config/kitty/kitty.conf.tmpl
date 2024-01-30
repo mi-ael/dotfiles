@@ -1289,7 +1289,7 @@ mark3_background #f274bc
 
 {{- if eq .chezmoi.osRelease.id "debian" }}
 # set shell for debian systems to cargo version of nu
-shell ~/.cargo/bin/nu
+shell $HOME/.cargo/bin/nu
 {{ end }}
 
 #: The shell program to execute. The default value of . means to use
