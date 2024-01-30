@@ -831,4 +831,6 @@ alias ya = yazi
 alias cat = bat
 alias less = less -R
 alias hx = helix
-#alias "dns query" = dns query --dnssec=none
+alias "dns query" = dns query --dnssec=none
+
+$env.PATH = (($env.PATH ++ ("~/.cargo/bin/" | path expand) ++ ("~/.local/bin/" | path expand)) | uniq)
